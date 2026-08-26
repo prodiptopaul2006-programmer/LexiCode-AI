@@ -8,6 +8,7 @@
 ![Security](https://img.shields.io/badge/Security-Hardened-critical?style=flat-square&logo=security&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=flat-square)
 
+---
 
 ## ✨ Key Features
 
@@ -19,13 +20,15 @@
   * **Strict Input Validation** with length constraints (capped at 5,000 characters) to mitigate token exhaustion and memory overload.
   * **Secure Server-Side Logging** with sanitized generic error responses to prevent internal stack trace leaks.
 
-
+---
 
 ## 🏗️ Architecture & Tech Stack
 
 * **Backend**: Python, Flask, Groq SDK, Flask-Limiter
 * **Frontend**: HTML5, Tailwind CSS (via CDN), Vanilla JavaScript (`fetch` API)
 * **Security & Environment**: Environment-variable credential isolation (`os.environ`), structured Python logging
+
+---
 
 ## ⚙️ Getting Started & Installation
 
