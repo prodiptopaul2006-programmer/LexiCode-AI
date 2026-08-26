@@ -1,11 +1,11 @@
 import os
 from flask import Flask, render_template, request, jsonify
-import google.generativeai as genai
+from groq import Groq
 
 app = Flask(__name__)
 
-# Configure Gemini API key
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY", "YOUR_API_KEY_HERE"))
+# Initialize Groq client
+client = Groq(api_key=os.environ.get("GROQ_API_KEY", "YOUR_API_KEY_HERE"))
 
 @app.route('/')
 def home():
@@ -15,16 +15,25 @@ def home():
 def generate():
     data = request.get_json()
     code_snippet = data.get('code', '')
-
+    
     if not code_snippet:
         return jsonify({'error': 'No code provided'}), 400
 
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
         prompt = f"Analyze this code snippet and provide professional documentation, a plain-English explanation, and a breakdown of its logic:\n\n{code_snippet}"
-
-        response = model.generate_content(prompt)
-        return jsonify({'documentation': response.text})
+        
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            model="llama-3.3-70b-versatile",
+        )
+        
+        doc_text = chat_completion.choices[0].message.content
+        return jsonify({'documentation': doc_text})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
