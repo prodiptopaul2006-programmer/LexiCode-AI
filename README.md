@@ -19,7 +19,7 @@
   * **Strict Input Validation** with length constraints (capped at 5,000 characters) to mitigate token exhaustion and memory overload.
   * **Secure Server-Side Logging** with sanitized generic error responses to prevent internal stack trace leaks.
 
----
+
 
 ## 🏗️ Architecture & Tech Stack
 
@@ -33,7 +33,7 @@ Follow these steps to set up and run LexiCode-AI locally on your machine.
 
 ### 1. Clone or Download the Repository
 If you have Git installed, clone the repository:
-```bash
+bash
 git clone [https://github.com/prodiptopaul2006-programmer/LexiCode-AI.git](https://github.com/prodiptopaul2006-programmer/LexiCode-AI.git)
 cd LexiCode-AI
 (Or download the ZIP archive directly from GitHub and extract it to your local directory).
