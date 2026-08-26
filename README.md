@@ -41,12 +41,12 @@ git clone [https://github.com/prodiptopaul2006-programmer/LexiCode-AI.git](https
 cd LexiCode-AI
 (Or download the ZIP archive directly from GitHub and extract it to your local directory).
 
-2. Install Dependencies
+### 2. Install Dependencies
 Make sure you have Python installed, then install the required packages:
 
 Bash
 pip install -r requirements.txt
-3. Configure Your Environment Variable
+### 3. Configure Your Environment Variable
 Set your Groq API key in your terminal session before running the application:
 
 On Windows (PowerShell):
@@ -57,7 +57,7 @@ On macOS / Linux (Terminal):
 
 Bash
 export GROQ_API_KEY="your_actual_groq_api_key_here"
-4. Run the Application
+### 4. Run the Application
 Start the Flask development server:
 
 Bash
