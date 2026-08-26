@@ -8,7 +8,6 @@
 ![Security](https://img.shields.io/badge/Security-Hardened-critical?style=flat-square&logo=security&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-purple?style=flat-square)
 
----
 
 ## ✨ Key Features
 
@@ -27,8 +26,6 @@
 * **Backend**: Python, Flask, Groq SDK, Flask-Limiter
 * **Frontend**: HTML5, Tailwind CSS (via CDN), Vanilla JavaScript (`fetch` API)
 * **Security & Environment**: Environment-variable credential isolation (`os.environ`), structured Python logging
-
----
 
 ## ⚙️ Getting Started & Installation
 
