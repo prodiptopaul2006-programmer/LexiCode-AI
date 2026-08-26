@@ -65,7 +65,7 @@ python app.py
 Open your browser and navigate to:
 👉 http://127.0.0.1:5000
 
-🔒 Security Practices Built-In
+## 🔒 Security Practices Built-In
 LexiCode-AI is designed with defensive programming and cybersecurity best practices in mind:
 
 API Key Protection: Secrets are never hardcoded; they rely strictly on environment variables and are excluded from version control via .gitignore.
@@ -74,7 +74,7 @@ Abate Scraping & Spam: The /generate endpoint enforces a strict rate limit per c
 
 Safe DOM Rendering: Frontend code uses text nodes (innerText) rather than raw HTML injection, neutralizing DOM-based XSS vulnerabilities.
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions, feature suggestions, and security audits are welcome! Feel free to fork this repository, open an issue, or submit a pull request.
 
 Fork the Project
@@ -87,5 +87,5 @@ Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📄 License
+## 📄 License
 Distributed under the MIT License. See LICENSE for more information.
